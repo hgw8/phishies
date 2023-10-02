@@ -30,7 +30,7 @@ var phish = require('phish2')
 
 Currently the only available use is the main aquarium generator, which is invoked by using `phish.aquarium(height, length)`. The output of the aquarium generator is an array with each line as a value
 
-Example `phish.aquarium(5,5) output`:
+Example `phish.aquarium(5,5)` output:
 
 ```
 [ '　　　　　', '　🐡　　　', '　　　🐡🐠', '🐙🐡　🦑　', '　　🦀🌿　' ]
