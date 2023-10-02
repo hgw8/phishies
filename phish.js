@@ -27,9 +27,9 @@ function aquarium(height, width) {
         lineArr = []
         if (i != height-1) {
             for(let i = 0; i < width; i++) {
-                if (Math.random()*100<13) {
+                if (Math.random()*100<10) {
                     lineArr.push(fish_types[Math.floor(Math.random()*fish_types.length)])
-                } else if (Math.random()*100<3) {
+                } else if (Math.random()*100<2) {
                     lineArr.push(rare_swimmer_types[Math.floor(Math.random()*rare_swimmer_types.length)])
                 } else {
                     lineArr.push('　')
@@ -40,9 +40,9 @@ function aquarium(height, width) {
             for(let i = 0; i < width; i++) {
                 if (Math.random()*100<30) {
                     lineArr.push(plant_types[Math.floor(Math.random()*plant_types.length)])
-                } else if (Math.random()*100<20) {
+                } else if (Math.random()*100<2) {
                     lineArr.push(rare_bottom_dwellers[Math.floor(Math.random()*rare_bottom_dwellers.length)])
-                } else if (Math.random()*100<1) {
+                } else if (Math.random()*100<0.5) {
                     lineArr.push(exceedingly_rare_junk[Math.floor(Math.random()*exceedingly_rare_junk.length)])
                 } else {
                     lineArr.push('　')
