@@ -23,7 +23,7 @@ npm i phishies -g
 ## Use in script
 
 ```
-var phish = require('phish2')
+var phish = require('phishies')
 ```
 
 # Usage
