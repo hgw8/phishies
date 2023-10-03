@@ -13,7 +13,9 @@ var fish_types = ["🐟", "🐡", "🐠"]
 var rare_swimmer_types = ["🐙", "🐬", "🦑", "🦈"]
 var plant_types = ["🌱", "🌾", "🌿"]
 var rare_bottom_dwellers = ["🪨", "🐌", "🏰", "🦀", "🐚", "⚓️", "☘️"]
-var exceedingly_rare_junk = ["🎱", "🎲", "🎮", "🗿","🔱", "🎷", "🗽", "💎", "💰", "🔔", "💀", "💩"]
+var exceedingly_rare_junk = ["🎱", "🎲", "🎮", "🗿", "🎷", "💎", "💰", "🔔", "💀", "💩"]
+var super_exceedingly_rare_junk = ["🗽", "🔱", "🛳️"]
+var bubbles = ["°ﾟ", "º", "｡"]
 
 function aquarium(height, width) {
     aquariumArray = []
@@ -25,9 +27,12 @@ function aquarium(height, width) {
     }
     for(let i = 0; i < height; i++) {
         lineArr = []
+        var heightLine = i
         if (i != height-1) {
             for(let i = 0; i < width; i++) {
-                if (Math.random()*100<10) {
+                if ([0,1].includes(heightLine) && Math.random()*100<7) {
+                    lineArr.push(bubbles[Math.floor(Math.random()*bubbles.length)])
+                } else if (Math.random()*100<10) {
                     lineArr.push(fish_types[Math.floor(Math.random()*fish_types.length)])
                 } else if (Math.random()*100<2) {
                     lineArr.push(rare_swimmer_types[Math.floor(Math.random()*rare_swimmer_types.length)])
@@ -44,6 +49,8 @@ function aquarium(height, width) {
                     lineArr.push(rare_bottom_dwellers[Math.floor(Math.random()*rare_bottom_dwellers.length)])
                 } else if (Math.random()*100<0.5) {
                     lineArr.push(exceedingly_rare_junk[Math.floor(Math.random()*exceedingly_rare_junk.length)])
+                } else if (Math.random()*100<0.25) {
+                    lineArr.push(super_exceedingly_rare_junk[Math.floor(Math.random()*super_exceedingly_rare_junk.length)])
                 } else {
                     lineArr.push('　')
                 }
