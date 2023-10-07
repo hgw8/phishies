@@ -16,7 +16,7 @@ var plant_types = ["🌱", "🌾", "🌿"]
 var rare_bottom_dwellers = ["🪨", "🐌", "🏰", "🦀", "🐚", "⚓️", "☘️"]
 var exceedingly_rare_junk = ["🎱", "🎲", "🎮", "🗿", "🎷", "💎", "💰", "🔔", "💀", "💩"]
 var super_exceedingly_rare_junk = ["🗽", "🔱", "🛳️"]
-var bubbles = ["°ﾟ", "º", "｡"]
+var bubbles = ["🫧"]
 
 // Non-emoji fish
 var n_fish_types = ["𓆝", "𓆟", "𓆞", "𓆜"]
@@ -25,6 +25,7 @@ var n_plant_types = ["𓆸", "𓋼", "𖥧", "𓇗", "𓇣"]
 var n_rare_bottom_dwellers = ["𓆑", "𓆨"]
 var n_exceedingly_rare_junk = []
 var n_super_exceedingly_rare_junk = ["𓀐𓂸", "𓃶", "𓃱", "✈"]
+var n_bubbles = ["°ﾟ", "º", "｡"]
 
 function aquarium(height, width) {
     aquariumArray = []
@@ -84,7 +85,7 @@ function aquarium_sym(height, width) {
         if (i != height-1) {
             for(let i = 0; i < width; i++) {
                 if ([0,1].includes(heightLine) && Math.random()*100<7) {
-                    lineArr.push(bubbles[Math.floor(Math.random()*bubbles.length)])
+                    lineArr.push(n_bubbles[Math.floor(Math.random()*n_bubbles.length)])
                 } else if (Math.random()*100<10) {
                     lineArr.push(n_fish_types[Math.floor(Math.random()*n_fish_types.length)])
                 } else if (Math.random()*100<2) {
